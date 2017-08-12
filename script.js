@@ -4,43 +4,38 @@ In this project, your task is to complete the unfinished functions. Instructions
 The `test.js` file contains tests for all of the functions in this project. Do not change any code in `test.js`. To see the output from `test.js` and to evaluate your work, open `index.html` in Chrome and view the console in the Developer Tools. You'll know that you are finding success when all of the `console.log` statements print 'true'.
 */
 
-
 /********************
 Use the following array to complete tasks 1-3
 *********************/
-let numbers = [ 1, 12, 4, 18, 9, 7, 11, 3, 101, 5, 6 ];
-
+let numbers = [1, 12, 4, 18, 9, 7, 11, 3, 101, 5, 6]
 
 /*
 1. Return the 4th element in the "numbers" array
 */
-function getFourthNum(){
-  console.log(numbers[3]);
+function getFourthNum() {
+  console.log(numbers[3])
 }
-
 
 /*
 2. Iterate over the "numbers" array. Push any numbers less than 10 onto "smallNums". Return "smallNums".
 */
-function smallNums(){
-    let smallNums = []
-      for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] < 10) {
-          smallNums.push(numbers[i])
-        }
-      }
-    return smallNums
+function smallNums() {
+  let smallNums = []
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] < 10) {
+      smallNums.push(numbers[i])
     }
-
-console.log(smallNums);
-    // Your answer here:
+  }
+  return smallNums
+}
+console.log(smallNums)
 
 /*
 3. Add 12, 99, and 101 (in that order) to the end of the "numbers" array. Return the "numbers" array.
 */
-function addNums(){
-    numbers.push('12','99','101')
-    console.log(numbers)
+function addNums() {
+  numbers.push("12", "99", "101")
+  console.log(numbers)
 }
 
 /********************
@@ -48,46 +43,38 @@ Use the following object to complete tasks 4-6
 *********************/
 
 let film = {
-    title : "Seven Samurai",
-    director : "Akira Kurosawa",
-    released : 1956,
-    runtime : 207,
-    budget : 2000000,
-    actors : [ "Toshiro Mifune", "Takashi Shimura", "Keiko Tsushima" ],
-};
-
+  title: "Seven Samurai",
+  director: "Akira Kurosawa",
+  released: 1956,
+  runtime: 207,
+  budget: 2000000,
+  actors: ["Toshiro Mifune", "Takashi Shimura", "Keiko Tsushima"]
+}
 
 /*
 4. Add a property "boxoffice" with a value of 269061 to the "film" object. Return "film".
 */
-function addBoxOffice(){
+function addBoxOffice() {
   film.boxoffice = "269,061"
   console.log(film)
-    // Your answer here:
+  // Your answer here:
 }
 
 /*
 5. Add the name "Yukiko Shimazaki" to the "actors" array. Return "film";
 */
-function addActor(){
+function addActor() {
   film.actors.push("Yukiko Shimazaki")
-  console.log(film);
+  console.log(film)
 }
 
 /*
 6. Now that you've added a "boxoffice" property, subtract "budget" from "property" and return the difference. This number is the amount lost by the studio in making the film. Return the loss.
 */
-function getLosses(){
-  return ([film.budget - film.boxoffice])
-  // Your answer here:
+function getLosses() {
+  return [film.budget - film.boxoffice]
 }
-  console.log(getLosses)
-
-
-
-
-
-
+console.log(getLosses)
 
 /*
 7. Iterate over "letterVals" and "numberVals". Concatenate the values from the two arrays and store the new values in the "vals" array. Return "vals".
@@ -95,40 +82,46 @@ function getLosses(){
 Your function should return [ "v5", "x67", "r34", "f456", "p78" ];
 */
 
-let numberVals = [ 5, 67, 34, 456, 78 ];
-let letterVals = [ "v", "x", "r", "f", "p" ];
-
-function interleave(){
-    let vals = [];
-
-    for (let i = 0; i < 5; i++){
-      console.log( letterVals[i], numberVals[i]);
-    }
-    // Your answer here:
+let numberVals = [5, 67, 34, 456, 78]
+let letterVals = ["v", "x", "r", "f", "p"]
+function interleave() {
+  let vals = []
+  for (let i = 0; i < 5; i++) {
+    console.log(letterVals[i], numberVals[i])
+  }
 }
-
-
-
-
-
 
 /*
 8. Iterate over the "first" and "second" arrays. Compare the values for both arrays. If the arrays values are the same, then store that value in the "same" array. Return "same".
 */
-
-let first = [ "blink", "stand", "glasses", "chair", "numinous", "adjacent", "bracelet", "hand" ];
-let second = [ "think", "stand", "cheese", "break", "numinous", "mouse", "close", "toe" ];
-
-function union(){
-    let same = [];
-
-    for (let i = 0; i < 7; i++) {
-      return ( first[i], second[i] );
-    }
-    if (first[i] === second[i]) {
-      console.log(first[i]);
-    } else {
-      return second[i]
-    }
-    // Your answer here:
+let first = [
+  "blink",
+  "stand",
+  "glasses",
+  "chair",
+  "numinous",
+  "adjacent",
+  "bracelet",
+  "hand"
+]
+let second = [
+  "think",
+  "stand",
+  "cheese",
+  "break",
+  "numinous",
+  "mouse",
+  "close",
+  "toe"
+]
+function union() {
+  let same = []
+  for (let i = 0; i < 7; i++) {
+    return first[i], second[i]
+  }
+  if (first[i] === second[i]) {
+    console.log(first[i])
+  } else {
+    return second[i]
+  }
 }
